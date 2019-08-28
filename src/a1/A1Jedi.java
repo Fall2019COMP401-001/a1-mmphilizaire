@@ -36,6 +36,8 @@ public class A1Jedi {
 			
 			//read number of items
 			int num = scan.nextInt();
+			
+			boolean[] updated = new boolean[count1];
 
 			for(int j = 0; j < num; j++) {
 				//read quantity and item
@@ -46,9 +48,11 @@ public class A1Jedi {
 				int index = indexOf(items, item);
 				
 				//update arrays
-				customers[index] += 1;
+				if(!updated[index]) {
+					customers[index] += 1;
+					updated[index] = true;
+				}
 				total[index] += quant;
-			
 			}
 		}
 		

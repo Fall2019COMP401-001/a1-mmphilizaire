@@ -40,6 +40,9 @@ public class A1Novice {
 			costs[i] = sum;
 		}
 		
+		//close scanner
+		scan.close();
+		
 		//prints output
 		for(int i = 0; i < count; i++) {
 			System.out.println(first[i].charAt(0) + ". " + last[i] + ": " + String.format("%.2f", costs[i]));
